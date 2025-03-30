@@ -1,0 +1,24 @@
+# https://www.acmicpc.net/problem/1920
+n = int(input())
+lst = list(map(int, input().split()))
+lst.sort()
+
+m = int(input())
+find = list(map(int, input().split()))
+
+for target in find:
+    low, high = 0, n - 1
+    found = False  # 값을 찾았는지 여부를 추적
+    while low <= high:
+        mid = (low + high) // 2
+        if target < lst[mid]:
+            high = mid - 1
+        elif target > lst[mid]:
+            low = mid + 1
+        else:
+            found = True  # 값을 찾았음을 표시
+            break
+    if found:
+        print(1)  # 값이 리스트에 존재
+    else:
+        print(0)  # 값이 리스트에 존재하지 않음
