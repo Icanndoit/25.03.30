@@ -1,0 +1,18 @@
+// https://www.acmicpc.net/problem/2525
+#include<iostream>
+using namespace std;
+
+int main() {
+	int hour, minute, input;
+	cin >> hour >> minute;
+	cin >> input;
+
+	minute += input;
+	hour += (minute / 60);
+	if (hour >= 24)
+		hour -= 24;
+	cout << hour << " " << minute % 60 << endl;
+
+
+	return 0;
+}
