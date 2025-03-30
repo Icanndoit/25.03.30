@@ -1,0 +1,20 @@
+// https://www.acmicpc.net/problem/11720
+#include<iostream>
+#include<string>
+using namespace std;
+
+int main() {
+	// 0 ~ 9 아스키 -> 48 ~ 57
+	string str;
+	int out;
+	cin >> out;
+	cin >> str;
+	
+	out = 0;
+	for (int i = 0; i < str.length(); i++)
+		out += (int)(str[i] - 48);
+	cout << out << endl;
+
+
+	return 0;
+}
