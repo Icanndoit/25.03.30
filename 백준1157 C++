@@ -1,0 +1,86 @@
+// https://www.acmicpc.net/problem/1157
+#include<iostream>
+#include<string>
+using namespace std;
+
+char alphabet(int arr[]) {
+	char re = 'A';
+	int maximum = arr[0];
+	for (int i = 1; i < 26; i++) {
+		if (arr[i] == maximum)
+			re = '?';
+		else if (arr[i] > maximum) {
+			maximum = arr[i];
+			re = (char)(i + 65);
+		}
+	}
+	return re;
+}
+
+int main() {
+	// a ~ z : 97 ~ 122
+	// A ~ Z : 65 ~ 90
+	string str;
+	cin >> str;
+	int arr[] = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+			      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };  // 26개
+	for (int i = 0; i < str.length(); i++)
+	{
+		if (str[i] == 'a' || str[i] == 'A')
+			arr[0] += 1;
+		else if (str[i] == 'b' || str[i] == 'B')
+			arr[1] += 1;
+		else if (str[i] == 'c' || str[i] == 'C')
+			arr[2] += 1;
+		else if (str[i] == 'd' || str[i] == 'D')
+			arr[3] += 1;
+		else if (str[i] == 'e' || str[i] == 'E')
+			arr[4] += 1;
+		else if (str[i] == 'f' || str[i] == 'F')
+			arr[5] += 1;
+		else if (str[i] == 'g' || str[i] == 'G')
+			arr[6] += 1;
+		else if (str[i] == 'h' || str[i] == 'H')
+			arr[7] += 1;
+		else if (str[i] == 'i' || str[i] == 'I')
+			arr[8] += 1;
+		else if (str[i] == 'j' || str[i] == 'J')
+			arr[9] += 1;
+		else if (str[i] == 'k' || str[i] == 'K')
+			arr[10] += 1;
+		else if (str[i] == 'l' || str[i] == 'L')
+			arr[11] += 1;
+		else if (str[i] == 'm' || str[i] == 'M')
+			arr[12] += 1;
+		else if (str[i] == 'n' || str[i] == 'N')
+			arr[13] += 1;
+		else if (str[i] == 'o' || str[i] == 'O')
+			arr[14] += 1;
+		else if (str[i] == 'p' || str[i] == 'P')
+			arr[15] += 1;
+		else if (str[i] == 'q' || str[i] == 'Q')
+			arr[16] += 1;
+		else if (str[i] == 'r' || str[i] == 'R')
+			arr[17] += 1;
+		else if (str[i] == 's' || str[i] == 'S')
+			arr[18] += 1;
+		else if (str[i] == 't' || str[i] == 'T')
+			arr[19] += 1;
+		else if (str[i] == 'u' || str[i] == 'U')
+			arr[20] += 1;
+		else if (str[i] == 'v' || str[i] == 'V')
+			arr[21] += 1;
+		else if (str[i] == 'w' || str[i] == 'W')
+			arr[22] += 1;
+		else if (str[i] == 'x' || str[i] == 'X')
+			arr[23] += 1;
+		else if (str[i] == 'y' || str[i] == 'Y')
+			arr[24] += 1;
+		else if (str[i] == 'z' || str[i] == 'Z')
+			arr[25] += 1;
+	}
+	cout << alphabet(arr) << endl;
+
+
+	return 0;
+}
